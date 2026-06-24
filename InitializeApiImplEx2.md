@@ -5,7 +5,18 @@ HRESULT WINAPI InitializeApiImpl(
     ULONG gdkVer,
     ULONG gsVer,
     char mode,
-    const XGameRuntimeOptions *options
+    struct {
+        UINT32 unknown0; // always 1
+        BOOL isInline; // only 1 when options.gameConfigSource == XGameRuntimeGameConfigSource::Inline
+        const char *gameConfig; // same pointer as options.gameConfig
+        void *unknown1; // null
+        void *unknown2;
+        void *unknown3;
+        void *unknown4;
+        void *unknown5;
+        void *unknown6; // null
+        XGameRuntimeOptions options;
+    } *options
 );
 ```
 
