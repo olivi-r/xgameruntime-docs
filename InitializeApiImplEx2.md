@@ -1,7 +1,7 @@
 # InitializeApiImplEx2
 
 ```c
-HRESULT WINAPI InitializeApiImpl(
+HRESULT WINAPI InitializeApiImplEx2(
     ULONG gdkVer,
     ULONG gsVer,
     char mode,
